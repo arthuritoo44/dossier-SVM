@@ -126,4 +126,13 @@ Cependant, quasiment 2/3 des individus sont bien prédits alors que notre variab
 
 ![Capture d'écran_20230210_152438](https://user-images.githubusercontent.com/118133724/218115550-0883c62a-6b04-49d2-a9bb-0d78c627c84a.png)
 
+La taille et la valeur marchande semble influencer de manière postive l'efficacité d'un attaquant. A l'inverse, le nombre de passes décisives engendre une diminution du nmnres de buts marqués par l'attaquant. On peut penser que certains attaquants ont plus un role de milieu de terrrain et donc de dernier passeur ce qui pourrait expliquer cette statistique.
+
+## Conclusion
+
+Le projet cherchait à montrer qu'il était possible de classifier un attaquant en fonction de son nombre de buts marqués par rapport à son temps de jeu. L'objectif était ici de faire la différence entre les deux opposés à l'aide de quelques paramètres majeurs. La valeur marchande apparait comme une statistique majeur, cependant, le niveau des championnats étant très hétérogènes, cette variable aurait eu plus d'impact dans un cadre plus homogène. 
+
+On remarque également que la taille influence positivement l'efficacité d'un attaquant. En effet, ceci peut s'expliquer par le fait qu'un attaquant peut avoir beaucoup de duels aériens, ainsi, une plus grande taille peut lui permettre de mettre des buts de la tête.
+
+La limite principal par rapport à l'efficacité général des modèles peut résider dans le manque d'homogénéité des championnats. Un ensemble de données plus important aurait pu également améliorer le degré de prévision de notre modèle.
 
