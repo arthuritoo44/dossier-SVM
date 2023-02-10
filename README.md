@@ -1,4 +1,5 @@
-# dossier-SVM
+# PROJET SVM
+
 L'objectif de ce projet est de mesurer l'efficacité d'un attaquant. Pour cela, nous analyserons tout d'abord notre variable à expliquer continue à savoir le ratio buts/minutes.
 
 Le jeu de données utilisé regroupe différentes statistiques sur de nombreux matchs de football entre 2014 et 2023. Il est mis à jour chaque semaine par rapport aux matchs joués. 
@@ -77,3 +78,52 @@ On remarque une ceratine linéraité entre la valeur marchande et l'efficacité.
 ## Modélisation
 
 Une fois cette analyse exploratoire effectuée nous avons exporté notre fichier afin de transformer notre variable à expliquer en variable catégorielle, l'objectif étant de ne garder que les individus les plus efficaces ainsi que ceux qui ne marquent pas beaucoup.
+
+Nous avons sélectionné uniquement les variables les plus influentes pour notre modélisation à savoir la valeur marchande du joueur, le nombre de passes décisives et la taille.
+
+L'échantillon a été séparé afin de garder 70% de l'échantillon pour l'entrainement et 30% pour le jeu test.
+
+Nos données n'étant pas sur les memes échelles, nous les avons standardisé afin d'avoir des résultats cohérents.
+
+Nous avons essayé de classifier nos données à l'aide d'une frontière de décision. 
+
+![Capture d'écran_20230210_150755](https://user-images.githubusercontent.com/118133724/218111944-7326fe31-eb1d-4242-b387-451982fcc848.png)
+
+
+Les résultats étant peu satisfaisant, nous avons cherché à calculer le degré de prévision de notre variable.
+
+Pour cela 4 modèles ont été entrainé sur notre dataset d'entrainement. On obtient un score plutot satisfaisant d'environ 65% d'accuracy sur nos modèles
+
+![Capture d'écran_20230210_151000](https://user-images.githubusercontent.com/118133724/218112394-98e77323-9ebf-4254-9b97-0f2fe9441c7f.png)
+
+## Choix du modèle final
+
+On prend le modèle linear SVC comme modèle final. Il est celui qui a le meilleur score en moyenne sur les folds 65% de bonnes prédictions. Il s'agit d'un modèle qui offre beaucoup plus d'hyperparamètres, il nécessite beaucoup de tunage avant d'offrir des bonnes performances.
+
+Le modèle régression logistique est celui qui a le moins de variance entre les scores de ses folds 0.020 de std. Le modèle semble stable et donc il possède moins de chance d'être en under ou overfitting.
+
+Les résultats restent très proches pour nos 4 modèles nous allons effectuer un grid search sur le modèle SVC linear pour avoir un compromis entre une faible variance et de bonnes prédictions.
+
+Le grid search va nous permettre de ressortir les meilleurs paramètres du modèle.
+
+![Capture d'écran_20230210_151626](https://user-images.githubusercontent.com/118133724/218113803-b2930d8a-6ed5-464d-b06d-45cfab0c6ba3.png)
+
+On remarque une accuracy proche pour les deux échantillons ce qui est un points positif et signifie une homogénéité dans les deux datasets.
+
+### Entrainement du modèles avec les hyperparamètres du grid search
+Le grid search nous détérmin un paramètre de régularisation c=10 avec un kernel lineaire pour ce qui est des meilleurs paramètres.
+
+La matrice de confusion va nous permettre de voir en détail les individus mal prédits.
+
+![Capture d'écran_20230210_151905](https://user-images.githubusercontent.com/118133724/218114317-11c2ca49-f14e-4dbb-b8d7-5f7faa727a00.png)
+
+On remarque que 53 individus sont prédits comme des attaquants peu efficaces alors qu'ils le sont en réalité. Inversement 80 joueurs sont prédits à torts comme des attaquants efficaces.
+Ces erreurs de classifiactions peuvent etre due au nombre d'observations qui a du étre réduits ce qui laisse moins de 400 individus à classer
+
+Cependant, quasiment 2/3 des individus sont bien prédits alors que notre variable prédire reste une variable qualitative qui peut varier selon les périodes de temps.
+
+### Influence des paramètres sur le modèle
+
+![Capture d'écran_20230210_152438](https://user-images.githubusercontent.com/118133724/218115550-0883c62a-6b04-49d2-a9bb-0d78c627c84a.png)
+
+
