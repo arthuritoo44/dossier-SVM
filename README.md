@@ -1,7 +1,5 @@
 # PROJET SVM
 
-Houssais Arthur
-M2 ECAP
 
 L'objectif de ce projet est de mesurer l'efficacité d'un attaquant. Pour cela, nous analyserons tout d'abord notre variable à expliquer continue à savoir le ratio buts/minutes.
 
@@ -139,3 +137,6 @@ On remarque également que la taille influence positivement l'efficacité d'un a
 
 La limite principal par rapport à l'efficacité général des modèles peut résider dans le manque d'homogénéité des championnats. Un ensemble de données plus important aurait pu également améliorer le degré de prévision de notre modèle.
 
+
+                                                                              Houssais Arthur
+                                                                              M2 ECAP
