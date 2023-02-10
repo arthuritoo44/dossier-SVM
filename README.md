@@ -43,6 +43,15 @@ L'étude des corrélation nous montrent que le ratio buts/minute est corrélée 
 
 ### Etude des variables catégorielles par rapport à la variable à expliquer
 
+Nous avons étudié à l'aide de différents graphiques les liens entre les variables catégorielles et notre variable à expliquer. On ne remarque pas forcément plus d'effeiacité pour les attquants d'un championnat. Mis à part le championnat italien qui semble avoir une mèdiane légèrement plus faible.
 
+Ensuite nous avons regardé si le pied favori du buteur nous permet d'avoir des informations sur son efficacité. On remarque que les gauxhers marquent relativement moins souvent, mais il est difficile de généraliser cela à l'ensemble des footballeurs.
 
 ### Nuages de points avec les variables quantitatives
+
+Nous avons ensuite regardé si un ajustement linéaire était présent entre nos variables qualitatives.
+On remarque une ceratine linéraité entre la valeur marchande et l'efficacité. En effet, plus un attaquant marque, plus sa valeur marchande est importante, il ya toutefois beaucoup d'observations avec un ratio très élevé ce qui limite l'interprétation.
+
+## Modélisation
+
+Une fois cette analyse exploratoire effectuée nous avons exporté notre fichier afin de transformer notre variable à expliquer en variable catégorielle, l'objectif étant de ne garder que les individus les plus efficaces ainsi que ceux qui ne marquent pas beaucoup.
