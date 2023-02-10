@@ -22,6 +22,7 @@ Nous cherchons à mesurer l'efficacité d'un attaquant. Dans le cas ou nous pren
 Nous allons donc créer une variable divisant le nombres de minutes jouées par le nombres de buts marqués afin de créer un ratio du nombres de minutes jouées entre deux buts. Afin d'avoir un échantillon représentatif, nous garderons les individus ayant marqués au moins un but et avec un temps de jeu minimum de 500 minutes.
 
 Afin de se concentrer sur les joueurs qui marquent le plus, nous allons nous concentré sur les attaquants de cette base de données. On remarque logiquement que les attaquants ont un ratio plus faible entre deux buts marqués par rapport aux défenseurs et aux milieux de terrains.
+![Capture d'écran_20230210_105327](https://user-images.githubusercontent.com/118133724/218061145-f647d45b-f6e3-40b3-aed2-79ac39468ebc.png)
 
 ## Analyse de la variable à expliquer
 
